@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io('https://baatein-chatapp.herokuapp.com/');
 
 // Get DOM Elements w.r.t Js Variables
 const form = document.getElementById('send-container');
