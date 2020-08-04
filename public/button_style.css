@@ -1,0 +1,62 @@
+.toggleButton{
+    margin: 1em;
+    text-align: center;
+  }
+  
+  .toggleButton__body{
+      position: relative;
+      display: inline-block;
+      width: 5em;
+      height: 2.5em;
+      cursor: pointer;
+      transition: .1s ease-in all;
+      border-radius: 1.25em;
+      background: #ddd linear-gradient(135deg, #dedede, #ddd);
+      box-shadow: 1px 1px 3px rgba(0,0,0,.3) inset;
+  }
+  
+  .toggleButton__body:before{
+      position: absolute;
+      top: .05em;
+      left: 1em;
+      right: 1em;
+      content: "OFF";
+      font-size: .75em;
+      line-height: 3.33em;
+      text-align: right;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #aaa;
+  }
+  
+  .toggleButton__body:after{
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: block;
+      width: calc(2.5em - 4px);
+      height: calc(2.5em - 4px);
+      content: "";
+      transition: .1s ease-in all;
+      border-radius: 1.25em;
+      background: #fff linear-gradient(135deg, #f0f0f0, #fff 75%);
+      box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+  }
+  
+  .toggleButton__checkbox{
+      display: none;
+  }
+  
+  :checked + .toggleButton__body{
+      background: #7ed321 linear-gradient(135deg, #8ee232, #7ed321);;
+  }
+  
+  :checked + .toggleButton__body:before{
+      content: "ON";
+      text-align: left;
+      color: #fff;
+  }
+  
+  :checked + .toggleButton__body:after{
+      left: calc(2.5em + 2px);
+  }

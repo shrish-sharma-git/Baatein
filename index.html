@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>बातें - A real-time Chatting WebApp</title>
-    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Baatein - Chatting Web Application</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/button_style.css">
 </head>
+
 <body>
-    <nav>
-        <h1>बातें - The Chatting Web Application</h1>
-        <img class="logo" src="./Assets/img/baatein_transparent.png" alt="">
-        <!-- <button class="btn">Info</button> -->
-    </nav>
-    <div class="container">
-        <!-- <div class="message right">Shrish: Hii</div>
-        <div class="message left">Robot: hey</div> -->
-    </div>
-    <div class="send">
-        <form action="#" id="send-container">
-            <input type="text" name="messageInp" id="messageInp">
-            <button class="btn" type="submit">Send</button>
-        </form>
-    </div>
+    <section class="chat__section">
+        <div class="brand">
+            <img height="65" src="/baatein_transparent.png" alt="">
+            <h1>Baatein - Chatting Web Application</h1>
+        </div>
+        <div class="message__area"></div>
+        <div>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
 </body>
-<script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
-<script defer src="./Assets/js/client.js"></script>
+
 </html>
